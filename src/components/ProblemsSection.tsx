@@ -40,8 +40,10 @@ const ProblemsSection: React.FC = () => {
         </h3>
         <h2 className="text-3xl font-bold text-black mt-2 relative inline-block group font-[Oswald]">
           <span className="relative">
-            <span className="relative z-10">Problems</span>
-            <span className="absolute left-0 bottom-0 w-full h-1 bg-orange-500 scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100"></span>
+            <span className="relative z-10 transition-transform duration-500 ease-in-out animate-pulse text-orange-500">
+              Problems
+            </span>
+            <span className="absolute left-0 bottom-0 w-full h-1 bg-orange-500 scale-x-0 transition-transform duration-500 ease-in-out animate-wiggle"></span>
           </span>{" "}
           That Add To Your Bottom Line
         </h2>
@@ -51,9 +53,9 @@ const ProblemsSection: React.FC = () => {
         {problemsData.map((problem, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-xl p-6 border border-gray-200 hover:shadow-2xl transition duration-300 flex flex-col"
+            className="bg-white  rounded-xl p-6 border border-gray-200 shadow-lg hover:shadow-2xl transform hover:rotate-2 transition-all duration-500 ease-in-out flex flex-col"
           >
-            <h3 className=" text-xl font-semibold text-gray-900 mb-4 flex-1">
+            <h3 className="text-xl font-semibold  mb-4 flex-1 text-orange-600 transition-colors duration-300">
               {problem.title}
             </h3>
             <ul className="text-gray-700 space-y-3 flex-1">
