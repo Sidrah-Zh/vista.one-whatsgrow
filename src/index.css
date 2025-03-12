@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@keyframes bounceCustom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounceCustom 0.8s infinite ease-in-out;
+}
