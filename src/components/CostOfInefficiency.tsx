@@ -55,7 +55,7 @@ const CostOfInefficiency = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-bold text-center text-white mb-12"
+          className="text-5xl font-bold text-center text-white mb-12"
         >
           The Cost of Inefficiency ⚠️
         </motion.h2>
