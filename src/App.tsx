@@ -5,6 +5,7 @@ import ProblemsSection from "./components/ProblemsSection";
 import CostOfInefficiency from "./components/CostOfInefficiency";
 import MarketingSection from "./components/MarketingSection";
 import FeaturesSection from "./components/FeaturesSection";
+import GameChangerSection from "./components/GameChangerSection";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <CostOfInefficiency />
       <MarketingSection />
       <FeaturesSection />
+      <GameChangerSection />
     </>
   );
 };
