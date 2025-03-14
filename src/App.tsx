@@ -6,6 +6,13 @@ import CostOfInefficiency from "./components/CostOfInefficiency";
 import MarketingSection from "./components/MarketingSection";
 import FeaturesSection from "./components/FeaturesSection";
 import GameChangerSection from "./components/GameChangerSection";
+import Marketing from "./components/Marketing";
+import WhatsGrowNextSection from "./components/WhatsgrowNext";
+import BenefitsSection from "./components/BenefitsSection";
+import PricingSection from "./components/PricingSection";
+import JoinVistaSection from "./components/JoinVistaSection";
+import Footer from "./components/Footer";
+import FooterBottom from "./components/FooterBottom";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +24,13 @@ const App: React.FC = () => {
       <MarketingSection />
       <FeaturesSection />
       <GameChangerSection />
+      <Marketing />
+      <WhatsGrowNextSection />
+      <BenefitsSection />
+      <PricingSection />
+      <JoinVistaSection />
+      <Footer />
+      <FooterBottom />
     </>
   );
 };
