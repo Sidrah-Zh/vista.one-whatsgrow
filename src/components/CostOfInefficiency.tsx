@@ -43,19 +43,19 @@ const cards = [
 const CostOfInefficiency = () => {
   return (
     <section
-      className="relative bg-cover bg-fixed bg-center py-24 px-8"
+      className="relative bg-cover bg-fixed bg-center py-24 px-4 md:px-8 lg:px-16"
       style={{
         backgroundImage:
           "url('https://media.istockphoto.com/id/2161298305/photo/big-data-technology-background.jpg?s=1024x1024&w=is&k=20&c=biIaxDWhBtCOPwK2wcGNp20UJTIu_EMCU0DdoNu9sBk=')",
       }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
-      <div className="relative z-10 container mx-auto px-20">
+      <div className="relative z-10 container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl font-bold text-center text-white mb-12"
+          className="text-4xl md:text-5xl font-bold text-center text-white mb-12"
         >
           The Cost of Inefficiency ⚠️
         </motion.h2>
@@ -70,7 +70,7 @@ const CostOfInefficiency = () => {
               transition: { staggerChildren: 0.2 },
             },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8"
+          className="flex flex-wrap justify-center gap-6 md:gap-8"
         >
           {cards.map((card, index) => (
             <motion.div
@@ -84,14 +84,14 @@ const CostOfInefficiency = () => {
                 boxShadow: "0px 10px 20px rgba(255, 165, 0, 0.3)",
               }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex items-start gap-3 border-2 border-gray-700 h-[280px] md:h-[320px] w-[320px]"
+              className="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex items-start gap-3 border-2 border-gray-700 w-full sm:w-[320px] md:w-[340px] lg:w-[360px] h-auto min-h-[280px]"
             >
               <div className="flex-shrink-0">{card.icon}</div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-white">
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-white">
                   {card.title}
                 </h3>
-                <p className="text-md text-gray-300">{card.content}</p>
+                <p className="text-sm md:text-md text-gray-300">{card.content}</p>
               </div>
             </motion.div>
           ))}
