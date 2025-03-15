@@ -1,11 +1,11 @@
 import React from "react";
-import Marketingg from "../assets/Marketing.jpg";
+import MarketingImage from "../assets/Marketingg.jpg";
 
 const Marketing: React.FC = () => {
   return (
     <div
       className="relative w-full min-h-[400px] md:h-[500px] flex items-center justify-center text-center bg-fixed bg-center bg-cover px-4"
-      style={{ backgroundImage: `url(${Marketingg})` }}
+      style={{ backgroundImage: `url(${MarketingImage})` }}
     >
       <div
         className="rounded-lg w-[90%] h-[55%] md:w-[85%] text-white flex flex-col items-center justify-center p-6"

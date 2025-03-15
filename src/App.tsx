@@ -15,6 +15,8 @@ import Footer from "./components/Footer";
 import FooterBottom from "./components/FooterBottom";
 import WhatsAppButton from "./components/WhatsappButton";
 import ChatButton from "./components/ChatButton";
+import PopupNotification from "./components/PopupNotification";
+import ClaimPopup from "./components/ClaimPopup";
 
 const App: React.FC = () => {
   return (
@@ -35,6 +37,8 @@ const App: React.FC = () => {
       <FooterBottom />
       <WhatsAppButton />
       <ChatButton />
+      <PopupNotification />
+      <ClaimPopup firstPopupClosed={true} />
     </>
   );
 };
