@@ -13,6 +13,8 @@ import PricingSection from "./components/PricingSection";
 import JoinVistaSection from "./components/JoinVistaSection";
 import Footer from "./components/Footer";
 import FooterBottom from "./components/FooterBottom";
+import WhatsAppButton from "./components/WhatsappButton";
+import ChatButton from "./components/ChatButton";
 
 const App: React.FC = () => {
   return (
@@ -31,6 +33,8 @@ const App: React.FC = () => {
       <JoinVistaSection />
       <Footer />
       <FooterBottom />
+      <WhatsAppButton />
+      <ChatButton />
     </>
   );
 };

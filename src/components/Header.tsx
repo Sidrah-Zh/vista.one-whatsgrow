@@ -3,18 +3,24 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import logo from "../assets/SVG-White.svg";
+import { motion } from "framer-motion";
 
 const Header: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowHeader(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,9 +29,14 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  if (!showHeader) return null;
+
   return (
     <>
-      <header
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed pt-4 pb-3 top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled ? "bg-white/20 backdrop-blur-lg shadow-md" : "bg-transparent"
         }`}
@@ -74,7 +85,7 @@ const Header: React.FC = () => {
             </button>
           </nav>
         </div>
-      </header>
+      </motion.header>
 
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </>
